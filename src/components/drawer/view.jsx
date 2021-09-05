@@ -63,11 +63,11 @@ export default ({ user, interviewee }) => (
       <div class="mdui-divider" />
       <If condition={user}>
         <Item
-          url={`/users/${user.user_id}`}
+          url={`/users/${user.id}`}
           icon="account_circle"
           title="个人资料"
           active={
-            isPathUser() && interviewee && user.user_id === interviewee.user_id
+            isPathUser() && interviewee && user.id === interviewee.user_id
           }
         />
       </If>
@@ -78,7 +78,7 @@ export default ({ user, interviewee }) => (
         active={
           isPathUsers() ||
           (isPathUser() &&
-            (!user || (interviewee && user.user_id !== interviewee.user_id)))
+            (!user || (interviewee && user.id !== interviewee.user_id)))
         }
       />
       <If condition={user}>

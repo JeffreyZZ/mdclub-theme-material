@@ -147,7 +147,7 @@ export default ({ state, actions, is_me }) => {
             <Follow
               item={interviewee}
               type="user"
-              id={interviewee.user_id}
+              id={interviewee.id}
               actions={actions}
             />
           </If>
@@ -168,7 +168,7 @@ export default ({ state, actions, is_me }) => {
               onclick={() => {
                 emit('users_dialog_open', {
                   type: 'followers',
-                  id: interviewee.user_id,
+                  id: interviewee.id,
                 });
               }}
             >
@@ -180,7 +180,7 @@ export default ({ state, actions, is_me }) => {
               onclick={() => {
                 emit('users_dialog_open', {
                   type: 'followees',
-                  id: interviewee.user_id,
+                  id: interviewee.id,
                 });
               }}
             >

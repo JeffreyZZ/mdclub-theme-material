@@ -44,7 +44,7 @@ const Popover = ({ user }) => (
       <button
         class="personal mdui-btn mdui-btn-dense mdui-btn-outlined mdui-color-theme mdui-ripple"
         onclick={() => {
-          const url = fullPath(`/users/${user.user_id}`);
+          const url = fullPath(`/users/${user.id}`);
 
           location.actions.go(url);
           menu.close();
@@ -54,7 +54,7 @@ const Popover = ({ user }) => (
       </button>
     </div>
     <div class="bottom">
-      <If condition={user.user_id === 1}>
+      <If condition={user.id === 1}>
         <PopoverBottomButton
           onClick={() => {
             window.location.href = fullPath('/admin');

@@ -10,7 +10,7 @@ export default (state, actions) => ({ match }) => {
   const interviewee_id = parseInt(match.params.user_id, 10);
 
   // 用户是否访问自己的主页
-  const is_me = state.user && interviewee_id === state.user.user_id;
+  const is_me = state.user && interviewee_id === state.user.id;
 
   return (
     <div
