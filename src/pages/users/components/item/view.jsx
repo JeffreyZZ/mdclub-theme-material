@@ -17,7 +17,7 @@ export default ({ user, actions }) => (
         <div
           class="avatar"
           style={{
-            backgroundImage: `url("${user.avatar.large}")`,
+            backgroundImage: `url("${user.avatar_text.large}")`,
           }}
         />
         <div class="username mdui-text-color-theme-text">{user.username}</div>

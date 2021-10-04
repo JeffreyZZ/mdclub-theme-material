@@ -53,7 +53,7 @@ $meta_title = $user['username'];
             </button>
             <input type="file" title=" " accept="image/jpeg,image/png">
           </div>
-          <img src="<?= $user['avatar']['large'] ?? '' ?>" class="avatar">
+          <img src="<?= $user['avatar_text']['large'] ?? '' ?>" class="avatar">
         </div>
         <div class="profile">
           <div class="meta username mdui-text-color-theme-text"><?= $user['username'] ?></div>
@@ -119,7 +119,7 @@ $meta_title = $user['username'];
           <?php foreach ($questions['data'] as $question): ?>
             <a class="mc-list-item" href="<?= get_root_url() ?>/questions/<?= $question['question_id'] ?>">
               <div class="mc-user-popover">
-                <div class="avatar user-popover-trigger" style="background-image: url(<?= $question['relationships']['user']['avatar']['middle'] ?? '' ?>);"></div>
+                <div class="avatar user-popover-trigger" style="background-image: url(<?= $question['relationships']['user']['avatar_text']['middle'] ?? '' ?>);"></div>
               </div>
               <div class="title mdui-text-color-theme-text"><?= $question['title'] ?></div>
               <div class="content mdui-text-color-theme-secondary">

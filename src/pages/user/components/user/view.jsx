@@ -69,7 +69,7 @@ export default ({ state, actions, is_me }) => {
             <If condition={is_me}>
               <AvatarUpload user={interviewee} />
             </If>
-            <img src={interviewee.avatar.large} class="avatar" />
+            <img src={interviewee.avatar_text.large} class="avatar" />
           </div>
           <div
             class={cc([

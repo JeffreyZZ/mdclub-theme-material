@@ -38,7 +38,7 @@ export default ({
               <div
                 class="avatar user-popover-trigger"
                 style={{
-                  backgroundImage: `url("${item.relationships.user.avatar.middle}")`,
+                  backgroundImage: `url("${item.relationships.user.avatar_text.middle}")`,
                 }}
               />
             </UserPopover>

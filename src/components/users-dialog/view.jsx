@@ -30,7 +30,7 @@ const Item = ({ item, actions }) => (
       onclick={() => actions.onItemClick(item.user_id)}
     >
       <div class="mdui-list-item-avatar">
-        <img src={item.avatar.middle} />
+        <img src={item.avatar_text.middle} />
       </div>
       <div class="mdui-list-item-content">{item.username}</div>
     </div>

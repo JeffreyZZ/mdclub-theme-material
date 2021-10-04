@@ -19,7 +19,7 @@ const Button = ({ user }) => (
       });
     }}
   >
-    <img src={user.avatar.middle} width="32" height="32" />
+    <img src={user.avatar_text.middle} width="32" height="32" />
   </div>
 );
 
@@ -37,7 +37,7 @@ const Popover = ({ user }) => (
     <div class="info">
       <div class="avatar-box">
         <AvatarUpload user={user} />
-        <img src={user.avatar.large} width="96" height="96" />
+        <img src={user.avatar_text.large} width="96" height="96" />
       </div>
       <div class="username">{user.username}</div>
       <div class="email mdui-text-color-theme-secondary">{user.email}</div>

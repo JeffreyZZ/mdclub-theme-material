@@ -25,10 +25,12 @@ const upload = (e, user) => {
 
   loadStart();
 
+  // uploadMyAvatar in mdclub-sdk-js hard-code 'avatar' as the data parameter name to call
+  // the remote API /user/avatar.
   uploadMyAvatar({ avatar: file })
     .finally(loadEnd)
     .then(({ data }) => {
-      user.avatar = data;
+      user.avatar_text = data;
       emit('user_update', user);
     })
     .catch((response) => {

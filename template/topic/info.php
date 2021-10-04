@@ -75,7 +75,7 @@ $meta_title = $topic['name'];
           <?php foreach ($questions['data'] as $question): ?>
             <a class="mc-list-item" href="<?= get_root_url() ?>/questions/<?= $question['question_id'] ?>">
               <div class="mc-user-popover">
-                <div class="avatar user-popover-trigger" style="background-image: url(<?= $question['relationships']['user']['avatar']['small'] ?? '' ?>);"></div>
+                <div class="avatar user-popover-trigger" style="background-image: url(<?= $question['relationships']['user']['avatar_text']['small'] ?? '' ?>);"></div>
               </div>
               <div class="title mdui-text-color-theme-text"><?= $question['title'] ?></div>
               <div class="content mdui-text-color-theme-secondary">
@@ -101,7 +101,7 @@ $meta_title = $topic['name'];
           <?php foreach ($articles['data'] as $article): ?>
             <a class="mc-list-item" href="<?= get_root_url() ?>/articles/<?= $article['article_id'] ?>">
               <div class="mc-user-popover">
-                <div class="avatar user-popover-trigger" style="background-image: url(<?= $article['relationships']['user']['avatar']['small'] ?? '' ?>);"></div>
+                <div class="avatar user-popover-trigger" style="background-image: url(<?= $article['relationships']['user']['avatar_text']['small'] ?? '' ?>);"></div>
               </div>
               <div class="title mdui-text-color-theme-text"><?= $article['title'] ?></div>
               <div class="content mdui-text-color-theme-secondary">

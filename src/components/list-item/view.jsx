@@ -39,7 +39,7 @@ const Avatar = ({ actions, user, tabName, primaryKey, id }) => (
     <div
       class="avatar user-popover-trigger"
       style={{
-        backgroundImage: `url("${user.avatar.middle}")`,
+        backgroundImage: `url("${user.avatar_text.middle}")`,
       }}
     />
   </UserPopover>

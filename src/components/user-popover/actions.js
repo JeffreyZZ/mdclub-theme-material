@@ -67,14 +67,13 @@ export default {
 
     let index;
     let item;
-    if (primaryKey) {
+    let user_id;
+
+    if (primaryKey != null) {
       index = findIndex(data, primaryKey, primaryValue);
       item = data[index];
+      user_id = item.relationships.user.id;
     }
-
-    const user_id = primaryKey
-      ? item.relationships.user.user_id
-      : data.relationships.user.user_id;
 
     getUserInfo({
       user_id,

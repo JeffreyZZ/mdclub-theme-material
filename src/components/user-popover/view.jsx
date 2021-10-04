@@ -41,9 +41,9 @@ export default (
           <Link
             key="avatar"
             class="avatar user-popover-trigger"
-            to={fullPath(`/users/${user.user_id}`)}
+            to={fullPath(`/users/${user.id}`)}
             style={{
-              backgroundImage: `url("${user.avatar.middle}")`,
+              backgroundImage: `url("${user.avatar_text.middle}")`,
             }}
           />
           <Link
