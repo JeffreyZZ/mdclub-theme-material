@@ -49,7 +49,7 @@ export default (
           <Link
             key="username"
             class="username user-popover-trigger mdui-text-color-theme-text"
-            to={fullPath(`/users/${user.user_id}`)}
+            to={fullPath(`/users/${user.id}`)}
           >
             {user.username}
           </Link>
@@ -59,12 +59,12 @@ export default (
         </div>
         <div class="stats">
           <StatItem
-            url={fullPath(`/users/${user.user_id}#answers`)}
+            url={fullPath(`/users/${user.id}#answers`)}
             label="回答"
             count={user.answer_count}
           />
           <StatItem
-            url={fullPath(`/users/${user.user_id}#articles`)}
+            url={fullPath(`/users/${user.id}#articles`)}
             label="文章"
             count={user.article_count}
           />
