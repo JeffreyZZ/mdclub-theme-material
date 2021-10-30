@@ -40,7 +40,7 @@ export default ({
       />
       <Link
         class="username user-popover-trigger mdui-text-color-theme-text"
-        to={fullPath(`/users/${user.user_id}`)}
+        to={fullPath(`/users/${user.id}`)}
       >
         {user.username}
       </Link>
