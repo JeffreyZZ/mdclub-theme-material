@@ -72,7 +72,9 @@ export default {
       item = data[index];
     }
 
-    const user_id = primaryKey ? item.relationships.user.id : data.relationships.user.id;
+    const user_id = primaryKey
+      ? item.relationships.user.id
+      : data.relationships.user.id;
     getUserInfo({
       user_id,
       include: ['is_followed', 'is_following', 'is_me'],
