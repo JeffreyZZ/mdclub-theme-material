@@ -64,17 +64,15 @@ export default {
   ) => {
     // eslint-disable-next-line no-eval
     const data = eval(`state.${dataName}`);
-
     let index;
     let item;
-    let user_id;
 
-    if (primaryKey != null) {
+    if (primaryKey) {
       index = findIndex(data, primaryKey, primaryValue);
       item = data[index];
-      user_id = item.relationships.user.id;
     }
 
+    const user_id = primaryKey ? item.relationships.user.id : data.relationships.user.id;
     getUserInfo({
       user_id,
       include: ['is_followed', 'is_following', 'is_me'],
