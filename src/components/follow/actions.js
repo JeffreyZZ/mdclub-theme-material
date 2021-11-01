@@ -59,6 +59,7 @@ const getDeleteFollowFunction = (type) => {
 const toggleOne = (type, state, actions) => {
   const field = type === 'user' ? 'interviewee' : type;
   const field_id = `${type}_id`;
+  const data_field_id =  type === 'user' ? 'id' : field_id;
   const following_field = `following_${field}`;
 
   const { [field]: data, [following_field]: following } = state;
@@ -78,7 +79,7 @@ const toggleOne = (type, state, actions) => {
   // 不等 ajax 的响应，先修改显示状态
   changeFollow();
 
-  const followParams = { [field_id]: data[field_id] };
+  const followParams = { [field_id]: data[data_field_id] };
   const func = data.relationships.is_following
     ? getAddFollowFunction(type)
     : getDeleteFollowFunction(type);
@@ -121,6 +122,11 @@ const toggleInList = (type, id, state, actions) => {
   const data = state[dataField];
 
   data.forEach((item, index) => {
+    if (type === 'user' || type === 'users_dialog')
+    {
+      item['user_id'] = item['id'];
+    }
+
     if (item[fieldId] !== id) {
       return;
     }

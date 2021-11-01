@@ -7,7 +7,7 @@
   window.G_OPTIONS = <?= json_encode(get_options()) ?>;
 </script>
 <?php if ($NODE_ENV === 'production'): ?>
-<script src="<?= get_theme_static_url() ?>/index.a3e2162c.js"></script>
+<script src="<?= get_theme_static_url() ?>/index.f5ed0c67.js"></script>
 <?php else: ?>
 <script src="http://localhost:8080/index.js"></script>
 <?php endif; ?>

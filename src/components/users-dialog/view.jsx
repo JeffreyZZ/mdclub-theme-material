@@ -27,7 +27,7 @@ const Item = ({ item, actions }) => (
     <div
       class="mdui-list-item mdui-ripple"
       key={item.user_id}
-      onclick={() => actions.onItemClick(item.user_id)}
+      onclick={() => actions.onItemClick(item.id)}
     >
       <div class="mdui-list-item-avatar">
         <img src={item.avatar_text.middle} />
@@ -38,7 +38,7 @@ const Item = ({ item, actions }) => (
       <Follow
         item={item}
         type="users_dialog"
-        id={item.user_id}
+        id={item.id}
         actions={actions}
       />
     </If>

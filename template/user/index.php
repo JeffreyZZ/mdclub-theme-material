@@ -33,7 +33,7 @@ $meta_title = '用户列表';
         <?php foreach ($users_recommended['data'] as $user): ?>
           <div class="item-inner">
             <div class="item mdui-card">
-              <a class="mdui-ripple info" href="<?= get_root_url() ?>/users/<?= $user['user_id'] ?>">
+              <a class="mdui-ripple info" href="<?= get_root_url() ?>/users/<?= $user['id'] ?>">
                 <div class="avatar" style="background-image: url(<?= $user['avatar_text']['large'] ?? '' ?>);"></div>
                 <div class="username mdui-text-color-theme-text"><?= $user['username'] ?></div>
                 <div class="headline mdui-text-color-theme-secondary"><?= $user['headline'] ?></div>
