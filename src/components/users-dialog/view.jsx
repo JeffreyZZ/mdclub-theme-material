@@ -35,12 +35,7 @@ const Item = ({ item, actions }) => (
       <div class="mdui-list-item-content">{item.username}</div>
     </div>
     <If condition={!item.relationships.is_me}>
-      <Follow
-        item={item}
-        type="users_dialog"
-        id={item.id}
-        actions={actions}
-      />
+      <Follow item={item} type="users_dialog" id={item.id} actions={actions} />
     </If>
   </div>
 );
